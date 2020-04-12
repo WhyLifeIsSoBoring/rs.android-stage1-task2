@@ -9,12 +9,12 @@ class Abbreviation {
         var test = StringBuilder(a.toUpperCase())
         var count = 0
 
-        while(count <= b.length) {
+        while(count != b.length && test.length >= b.length) {
             if(test[count] != b[count]) {
                 test.deleteCharAt(count)
                 count--
             }
-            count++
+            ++count
         }
         if (count == b.length)
             return "YES"
